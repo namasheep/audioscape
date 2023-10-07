@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>434789395486-4b7uikcstn3rk8pv14os8jj9vs04lhpj.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.434789395486-4b7uikcstn3rk8pv14os8jj9vs04lhpj</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAtquLKMYdv93A90REQ0d0R4LS5m25JIpQ</string>
+	<key>GCM_SENDER_ID</key>
+	<string>434789395486</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.BostonCream.AudioScape.AudioScape</string>
+	<key>PROJECT_ID</key>
+	<string>audioscape-12710</string>
+	<key>STORAGE_BUCKET</key>
+	<string>audioscape-12710.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:434789395486:ios:0b6ad00de6c1ba8c52120f</string>
+	<key>DATABASE_URL</key>
+	<string>https://audioscape-12710-default-rtdb.firebaseio.com</string>
+</dict>
+</plist>

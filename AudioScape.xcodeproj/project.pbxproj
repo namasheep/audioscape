@@ -1,0 +1,555 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BA584C7B2A98777D0012CC68 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA584C7A2A98777D0012CC68 /* KeychainManager.swift */; };
+		BA584C7D2A98786B0012CC68 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA584C7C2A98786B0012CC68 /* HomeView.swift */; };
+		BA584C7F2A9950BA0012CC68 /* SpotifyAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA584C7E2A9950BA0012CC68 /* SpotifyAPIManager.swift */; };
+		BA584C812A995F470012CC68 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA584C802A995F470012CC68 /* GoogleService-Info.plist */; };
+		BA584C832AA96B690012CC68 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA584C822AA96B690012CC68 /* LocationManager.swift */; };
+		BA584C882AABCC330012CC68 /* Geohash in Frameworks */ = {isa = PBXBuildFile; productRef = BA584C872AABCC330012CC68 /* Geohash */; };
+		BA584C8A2AABCD830012CC68 /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA584C892AABCD830012CC68 /* FirestoreManager.swift */; };
+		BA584C8C2AABF3C80012CC68 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA584C8B2AABF3C80012CC68 /* HomeModel.swift */; };
+		BA584C8E2AABF6AA0012CC68 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA584C8D2AABF6AA0012CC68 /* User.swift */; };
+		BA584C902AAC069B0012CC68 /* UserSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA584C8F2AAC069B0012CC68 /* UserSong.swift */; };
+		BA584C922AAE32760012CC68 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA584C912AAE32760012CC68 /* UserInfo.swift */; };
+		BA584C9D2ACB47080012CC68 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = BA584C9C2ACB47080012CC68 /* ComposableArchitecture */; };
+		BAC0C9B72AD209EB00F57C89 /* LoginDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC0C9B62AD209EB00F57C89 /* LoginDomain.swift */; };
+		BAD27A982A7EE45B00D74AC7 /* AudioScapeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD27A972A7EE45B00D74AC7 /* AudioScapeApp.swift */; };
+		BAD27A9A2A7EE45B00D74AC7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD27A992A7EE45B00D74AC7 /* ContentView.swift */; };
+		BAD27A9C2A7EE45B00D74AC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAD27A9B2A7EE45B00D74AC7 /* Assets.xcassets */; };
+		BAD27A9F2A7EE45B00D74AC7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAD27A9E2A7EE45B00D74AC7 /* Preview Assets.xcassets */; };
+		BAD27AA72A7EE83B00D74AC7 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BAD27AA62A7EE83B00D74AC7 /* FirebaseAnalyticsSwift */; };
+		BAD27AA92A7EE83B00D74AC7 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = BAD27AA82A7EE83B00D74AC7 /* FirebaseAppCheck */; };
+		BAD27AAB2A7EE83B00D74AC7 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = BAD27AAA2A7EE83B00D74AC7 /* FirebaseAuth */; };
+		BAD27AAD2A7EE83B00D74AC7 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = BAD27AAC2A7EE83B00D74AC7 /* FirebaseDatabase */; };
+		BAD27AAF2A7EE83B00D74AC7 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BAD27AAE2A7EE83B00D74AC7 /* FirebaseDatabaseSwift */; };
+		BAD27AB12A7EE83B00D74AC7 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = BAD27AB02A7EE83B00D74AC7 /* FirebaseFirestore */; };
+		BAD27AB32A7EE83B00D74AC7 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BAD27AB22A7EE83B00D74AC7 /* FirebaseFirestoreSwift */; };
+		BAD27AB52A7EE83B00D74AC7 /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = BAD27AB42A7EE83B00D74AC7 /* FirebaseFunctions */; };
+		BAD27AB72A7EE83B00D74AC7 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = BAD27AB62A7EE83B00D74AC7 /* FirebaseStorage */; };
+		BAD27ABD2A80195B00D74AC7 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD27ABC2A80195B00D74AC7 /* LoginView.swift */; };
+		BAD27ABF2A8019B800D74AC7 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD27ABE2A8019B800D74AC7 /* AuthManager.swift */; };
+		BAD27AC42A801C6F00D74AC7 /* SpotifyiOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAD27AC32A801C6F00D74AC7 /* SpotifyiOS.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BA584C7A2A98777D0012CC68 /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		BA584C7C2A98786B0012CC68 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		BA584C7E2A9950BA0012CC68 /* SpotifyAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotifyAPIManager.swift; sourceTree = "<group>"; };
+		BA584C802A995F470012CC68 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BA584C822AA96B690012CC68 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		BA584C892AABCD830012CC68 /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
+		BA584C8B2AABF3C80012CC68 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		BA584C8D2AABF6AA0012CC68 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BA584C8F2AAC069B0012CC68 /* UserSong.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSong.swift; sourceTree = "<group>"; };
+		BA584C912AAE32760012CC68 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		BAC0C9B62AD209EB00F57C89 /* LoginDomain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDomain.swift; sourceTree = "<group>"; };
+		BAD27A942A7EE45B00D74AC7 /* AudioScape.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioScape.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAD27A972A7EE45B00D74AC7 /* AudioScapeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioScapeApp.swift; sourceTree = "<group>"; };
+		BAD27A992A7EE45B00D74AC7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BAD27A9B2A7EE45B00D74AC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BAD27A9E2A7EE45B00D74AC7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BAD27ABB2A80158600D74AC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		BAD27ABC2A80195B00D74AC7 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		BAD27ABE2A8019B800D74AC7 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		BAD27AC02A801AF000D74AC7 /* AudioScape-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AudioScape-Bridging-Header.h"; sourceTree = "<group>"; };
+		BAD27AC32A801C6F00D74AC7 /* SpotifyiOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SpotifyiOS.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BAD27A912A7EE45B00D74AC7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA584C882AABCC330012CC68 /* Geohash in Frameworks */,
+				BAD27AAF2A7EE83B00D74AC7 /* FirebaseDatabaseSwift in Frameworks */,
+				BA584C9D2ACB47080012CC68 /* ComposableArchitecture in Frameworks */,
+				BAD27AA92A7EE83B00D74AC7 /* FirebaseAppCheck in Frameworks */,
+				BAD27AB72A7EE83B00D74AC7 /* FirebaseStorage in Frameworks */,
+				BAD27AAB2A7EE83B00D74AC7 /* FirebaseAuth in Frameworks */,
+				BAD27AB52A7EE83B00D74AC7 /* FirebaseFunctions in Frameworks */,
+				BAD27AC42A801C6F00D74AC7 /* SpotifyiOS.framework in Frameworks */,
+				BAD27AB32A7EE83B00D74AC7 /* FirebaseFirestoreSwift in Frameworks */,
+				BAD27AAD2A7EE83B00D74AC7 /* FirebaseDatabase in Frameworks */,
+				BAD27AA72A7EE83B00D74AC7 /* FirebaseAnalyticsSwift in Frameworks */,
+				BAD27AB12A7EE83B00D74AC7 /* FirebaseFirestore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BAD27A8B2A7EE45B00D74AC7 = {
+			isa = PBXGroup;
+			children = (
+				BA584C912AAE32760012CC68 /* UserInfo.swift */,
+				BAD27AC02A801AF000D74AC7 /* AudioScape-Bridging-Header.h */,
+				BAD27AC32A801C6F00D74AC7 /* SpotifyiOS.framework */,
+				BAD27A962A7EE45B00D74AC7 /* AudioScape */,
+				BAD27A952A7EE45B00D74AC7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BAD27A952A7EE45B00D74AC7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BAD27A942A7EE45B00D74AC7 /* AudioScape.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BAD27A962A7EE45B00D74AC7 /* AudioScape */ = {
+			isa = PBXGroup;
+			children = (
+				BA584C892AABCD830012CC68 /* FirestoreManager.swift */,
+				BA584C7A2A98777D0012CC68 /* KeychainManager.swift */,
+				BA584C802A995F470012CC68 /* GoogleService-Info.plist */,
+				BAD27ABB2A80158600D74AC7 /* Info.plist */,
+				BAD27A972A7EE45B00D74AC7 /* AudioScapeApp.swift */,
+				BA584C7E2A9950BA0012CC68 /* SpotifyAPIManager.swift */,
+				BAD27ABC2A80195B00D74AC7 /* LoginView.swift */,
+				BAD27ABE2A8019B800D74AC7 /* AuthManager.swift */,
+				BAD27A992A7EE45B00D74AC7 /* ContentView.swift */,
+				BA584C822AA96B690012CC68 /* LocationManager.swift */,
+				BA584C8B2AABF3C80012CC68 /* HomeModel.swift */,
+				BA584C7C2A98786B0012CC68 /* HomeView.swift */,
+				BAD27A9B2A7EE45B00D74AC7 /* Assets.xcassets */,
+				BAD27A9D2A7EE45B00D74AC7 /* Preview Content */,
+				BA584C8D2AABF6AA0012CC68 /* User.swift */,
+				BA584C8F2AAC069B0012CC68 /* UserSong.swift */,
+				BAC0C9B62AD209EB00F57C89 /* LoginDomain.swift */,
+			);
+			path = AudioScape;
+			sourceTree = "<group>";
+		};
+		BAD27A9D2A7EE45B00D74AC7 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				BAD27A9E2A7EE45B00D74AC7 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BAD27A932A7EE45B00D74AC7 /* AudioScape */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAD27AA22A7EE45B00D74AC7 /* Build configuration list for PBXNativeTarget "AudioScape" */;
+			buildPhases = (
+				BAD27A902A7EE45B00D74AC7 /* Sources */,
+				BAD27A912A7EE45B00D74AC7 /* Frameworks */,
+				BAD27A922A7EE45B00D74AC7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AudioScape;
+			packageProductDependencies = (
+				BAD27AA62A7EE83B00D74AC7 /* FirebaseAnalyticsSwift */,
+				BAD27AA82A7EE83B00D74AC7 /* FirebaseAppCheck */,
+				BAD27AAA2A7EE83B00D74AC7 /* FirebaseAuth */,
+				BAD27AAC2A7EE83B00D74AC7 /* FirebaseDatabase */,
+				BAD27AAE2A7EE83B00D74AC7 /* FirebaseDatabaseSwift */,
+				BAD27AB02A7EE83B00D74AC7 /* FirebaseFirestore */,
+				BAD27AB22A7EE83B00D74AC7 /* FirebaseFirestoreSwift */,
+				BAD27AB42A7EE83B00D74AC7 /* FirebaseFunctions */,
+				BAD27AB62A7EE83B00D74AC7 /* FirebaseStorage */,
+				BA584C872AABCC330012CC68 /* Geohash */,
+				BA584C9C2ACB47080012CC68 /* ComposableArchitecture */,
+			);
+			productName = AudioScape;
+			productReference = BAD27A942A7EE45B00D74AC7 /* AudioScape.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BAD27A8C2A7EE45B00D74AC7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					BAD27A932A7EE45B00D74AC7 = {
+						CreatedOnToolsVersion = 14.3.1;
+						LastSwiftMigration = 1430;
+					};
+				};
+			};
+			buildConfigurationList = BAD27A8F2A7EE45B00D74AC7 /* Build configuration list for PBXProject "AudioScape" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BAD27A8B2A7EE45B00D74AC7;
+			packageReferences = (
+				BAD27AA52A7EE83B00D74AC7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				BA584C862AABCC330012CC68 /* XCRemoteSwiftPackageReference "swift-geohash" */,
+				BA584C9B2ACB47080012CC68 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
+			productRefGroup = BAD27A952A7EE45B00D74AC7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BAD27A932A7EE45B00D74AC7 /* AudioScape */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BAD27A922A7EE45B00D74AC7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAD27A9F2A7EE45B00D74AC7 /* Preview Assets.xcassets in Resources */,
+				BAD27A9C2A7EE45B00D74AC7 /* Assets.xcassets in Resources */,
+				BA584C812A995F470012CC68 /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BAD27A902A7EE45B00D74AC7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA584C7F2A9950BA0012CC68 /* SpotifyAPIManager.swift in Sources */,
+				BA584C8A2AABCD830012CC68 /* FirestoreManager.swift in Sources */,
+				BAD27ABD2A80195B00D74AC7 /* LoginView.swift in Sources */,
+				BAC0C9B72AD209EB00F57C89 /* LoginDomain.swift in Sources */,
+				BAD27ABF2A8019B800D74AC7 /* AuthManager.swift in Sources */,
+				BAD27A9A2A7EE45B00D74AC7 /* ContentView.swift in Sources */,
+				BA584C832AA96B690012CC68 /* LocationManager.swift in Sources */,
+				BA584C7D2A98786B0012CC68 /* HomeView.swift in Sources */,
+				BAD27A982A7EE45B00D74AC7 /* AudioScapeApp.swift in Sources */,
+				BA584C922AAE32760012CC68 /* UserInfo.swift in Sources */,
+				BA584C8C2AABF3C80012CC68 /* HomeModel.swift in Sources */,
+				BA584C7B2A98777D0012CC68 /* KeychainManager.swift in Sources */,
+				BA584C8E2AABF6AA0012CC68 /* User.swift in Sources */,
+				BA584C902AAC069B0012CC68 /* UserSong.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		BAD27AA02A7EE45B00D74AC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BAD27AA12A7EE45B00D74AC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BAD27AA32A7EE45B00D74AC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AudioScape/Preview Content\"";
+				DEVELOPMENT_TEAM = 8GQMJTGXNS;
+				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AudioScape/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "GIVE ME YOUR LOCATION HEHEHEHEH";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "GIVE ME YOUR LOCATION HEHEHEHEH";
+				INFOPLIST_KEY_NSLocationUsageDescription = "GIVE ME YOUR LOCATION HEHEHEHEH";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "GIVE ME YOUR LOCATION HEHEHEHEH";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.BostonCream.AudioScape.AudioScape;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "AudioScape-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BAD27AA42A7EE45B00D74AC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AudioScape/Preview Content\"";
+				DEVELOPMENT_TEAM = 8GQMJTGXNS;
+				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AudioScape/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "GIVE ME YOUR LOCATION HEHEHEHEH";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "GIVE ME YOUR LOCATION HEHEHEHEH";
+				INFOPLIST_KEY_NSLocationUsageDescription = "GIVE ME YOUR LOCATION HEHEHEHEH";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "GIVE ME YOUR LOCATION HEHEHEHEH";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.BostonCream.AudioScape.AudioScape;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "AudioScape-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BAD27A8F2A7EE45B00D74AC7 /* Build configuration list for PBXProject "AudioScape" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAD27AA02A7EE45B00D74AC7 /* Debug */,
+				BAD27AA12A7EE45B00D74AC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BAD27AA22A7EE45B00D74AC7 /* Build configuration list for PBXNativeTarget "AudioScape" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAD27AA32A7EE45B00D74AC7 /* Debug */,
+				BAD27AA42A7EE45B00D74AC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BA584C862AABCC330012CC68 /* XCRemoteSwiftPackageReference "swift-geohash" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/emilioschepis/swift-geohash.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		BA584C9B2ACB47080012CC68 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "http://github.com/pointfreeco/swift-composable-architecture#Installation";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		BAD27AA52A7EE83B00D74AC7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BA584C872AABCC330012CC68 /* Geohash */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BA584C862AABCC330012CC68 /* XCRemoteSwiftPackageReference "swift-geohash" */;
+			productName = Geohash;
+		};
+		BA584C9C2ACB47080012CC68 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BA584C9B2ACB47080012CC68 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+		BAD27AA62A7EE83B00D74AC7 /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BAD27AA52A7EE83B00D74AC7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		BAD27AA82A7EE83B00D74AC7 /* FirebaseAppCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BAD27AA52A7EE83B00D74AC7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
+		};
+		BAD27AAA2A7EE83B00D74AC7 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BAD27AA52A7EE83B00D74AC7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		BAD27AAC2A7EE83B00D74AC7 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BAD27AA52A7EE83B00D74AC7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		BAD27AAE2A7EE83B00D74AC7 /* FirebaseDatabaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BAD27AA52A7EE83B00D74AC7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabaseSwift;
+		};
+		BAD27AB02A7EE83B00D74AC7 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BAD27AA52A7EE83B00D74AC7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		BAD27AB22A7EE83B00D74AC7 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BAD27AA52A7EE83B00D74AC7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		BAD27AB42A7EE83B00D74AC7 /* FirebaseFunctions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BAD27AA52A7EE83B00D74AC7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFunctions;
+		};
+		BAD27AB62A7EE83B00D74AC7 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BAD27AA52A7EE83B00D74AC7 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = BAD27A8C2A7EE45B00D74AC7 /* Project object */;
+}
