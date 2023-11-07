@@ -33,6 +33,35 @@ exports.helloWorld = onCall((request) => {
    }
 });
 
+exports.getUsersWithSameLocation = functions.https.onRequest(async (req, res) => {
+  try {
+    // Create a reference to the users collection
+    const db = admin.firestore();
+    const usersRef = db.collection('users');
+
+    const targetLocation = req.body.location; // Assuming you are sending the location in the request body
+
+    // Query users with the same location
+    const querySnapshot = await usersRef.where('location', '==', targetLocation).get();
+
+    const users = [];
+    querySnapshot.forEach((doc) => {
+      const userData = doc.data();
+      const user = {
+        uid: doc.id,
+        songs: userData.songs || [], // Assuming 'songs' is an array
+      };
+      users.push(user);
+    });
+
+    // Send the response as JSON
+    res.json({ users });
+  } catch (error) {
+    console.error('Error getting users:', error);
+    res.status(500).json({ error: error.message });
+  }
+});
+
 exports.generateCustomToken = functions.https.onRequest(async (req, res) => {
   try {
     const { uid, spotifyAccessToken } = req.body; // Get UID and Spotify access token from the request body
@@ -104,7 +133,57 @@ exports.authToken = functions.https.onCall(async (data, context) => {
   }
 });
 // Define your Cloud Function
+exports.getSong = functions.https.onCall(async (data, context) => {
+  try {
+    if (!context.auth) {
+      throw new HttpsError('unauthenticated', 'User is not authenticated');
+    }
 
+    const userId = context.auth.uid;
+    const userRef = admin.firestore().collection('users').doc(userId);
+    const userDoc = await userRef.get();
+
+    if (!userDoc.exists) {
+      throw new HttpsError('not-found', 'User data not found');
+    }
+
+
+    const { accessToken, refreshToken, songs} = userDoc.data();
+
+    const userInfoResponse = await fetch(`https://api.spotify.com/v1/tracks/${data.songID}`, {
+      method: 'GET',
+      headers: {
+        Authorization: `Bearer ${accessToken}`,
+      },
+    });
+
+    if (!userInfoResponse.ok) {
+      if (userInfoResponse.status === 401) {
+          const refreshedAccessToken = await refreshAccessToken(refreshToken, userId)
+          const refreshedUserInfoResponse = await fetch(`https://api.spotify.com/v1/tracks/${data.songID}`, {
+            method: 'GET',
+            headers: {
+              Authorization: `Bearer ${refreshedAccessToken}`,
+            },
+          });
+
+          if (refreshedUserInfoResponse.ok) {
+            const refreshedUserInfo = await refreshedUserInfoResponse.json();
+            return refreshedUserInfo
+              
+          }
+        }
+        else{
+          throw new HttpsError('internal', 'Failed to fetch user info from Spotify');
+        }
+    }
+    const userInfo = await userInfoResponse.json();
+    return userInfo
+  } catch (error) {
+      console.error(error);
+      throw new HttpsError('internal', error.message);
+  }
+});
 
 
 
@@ -122,7 +201,8 @@ exports.getUserInfo = functions.https.onCall(async (data, context) => {
       throw new HttpsError('not-found', 'User data not found');
     }
 
-    const { accessToken, refreshToken } = userDoc.data();
+
+    const { accessToken, refreshToken, songs} = userDoc.data();
 
     const userInfoResponse = await fetch('https://api.spotify.com/v1/me', {
       method: 'GET',
@@ -133,34 +213,7 @@ exports.getUserInfo = functions.https.onCall(async (data, context) => {
 
     if (!userInfoResponse.ok) {
       if (userInfoResponse.status === 401) {
-        // Token is likely expired, refresh the token
-        const clientId = functions.config().spotify.client_id;
-        const clientSecret = functions.config().spotify.client_secret;
-        const authOptions = {
-          method: 'POST',
-          headers: {
-            Authorization: `Basic ${Buffer.from(`${clientId}:${clientSecret}`).toString('base64')}`,
-            'Content-Type': 'application/x-www-form-urlencoded',
-          },
-          body: `grant_type=refresh_token&refresh_token=${refreshToken}`,
-        };
-
-        const authResponse = await fetch('https://accounts.spotify.com/api/token', authOptions);
-
-        if (!authResponse.ok) {
-          throw new HttpsError('internal', 'Failed to refresh access token');
-        }
-
-        const authData = await authResponse.json();
-
-        if (authData.access_token) {
-          // Update the access token
-          await admin.firestore().collection('users').doc(userId).update({
-            accessToken: authData.access_token,
-          });
-
-          // Retry fetching user info with the refreshed token
-          const refreshedAccessToken = authData.access_token;
+          const refreshedAccessToken = await refreshAccessToken(refreshToken, userId)
           const refreshedUserInfoResponse = await fetch('https://api.spotify.com/v1/me', {
             method: 'GET',
             headers: {
@@ -173,28 +226,55 @@ exports.getUserInfo = functions.https.onCall(async (data, context) => {
             return {
               uid: userId,
               href: refreshedUserInfo.href,
-              images: refreshedUserInfo.images,
+              images: refreshedUserInfo.images[0],
               display_name: refreshedUserInfo.display_name,
+              songs : songs
             };
           }
         }
-      }
-
-      throw new HttpsError('internal', 'Failed to fetch user info from Spotify');
+        else{
+          throw new HttpsError('internal', 'Failed to fetch user info from Spotify');
+        }
     }
-
     const userInfo = await userInfoResponse.json();
     return {
       uid: userId,
       href: userInfo.href,
-      images: userInfo.images,
+      images: userInfo.images[0],
       display_name: userInfo.display_name,
+      songs: songs
     };
   } catch (error) {
-    console.error(error);
-    throw new HttpsError('internal', error.message);
+      console.error(error);
+      throw new HttpsError('internal', error.message);
   }
 });
+
+async function refreshAccessToken(refreshToken, userId){
+  const clientId = functions.config().spotify.client_id;
+  const clientSecret = functions.config().spotify.client_secret;
+  const authOptions = {
+    method: 'POST',
+    headers: {
+      Authorization: `Basic ${Buffer.from(`${clientId}:${clientSecret}`).toString('base64')}`,
+      'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    body: `grant_type=refresh_token&refresh_token=${refreshToken}`,
+  };
+
+  const authResponse = await fetch('https://accounts.spotify.com/api/token', authOptions);
+
+  if (!authResponse.ok) {
+    throw new HttpsError('internal', 'Failed to refresh access token');
+  }
+  else{
+    const authData = await authResponse.json();
+    await admin.firestore().collection('users').doc(userId).update({
+            accessToken: authData.access_token,
+          });
+    return authData.access_token
+  }
+}
 
 exports.uploadGeoHash = functions.https.onCall(async (data, context) => {
   try {

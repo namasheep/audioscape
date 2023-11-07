@@ -19,7 +19,13 @@
 		BA584C902AAC069B0012CC68 /* UserSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA584C8F2AAC069B0012CC68 /* UserSong.swift */; };
 		BA584C922AAE32760012CC68 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA584C912AAE32760012CC68 /* UserInfo.swift */; };
 		BA584C9D2ACB47080012CC68 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = BA584C9C2ACB47080012CC68 /* ComposableArchitecture */; };
-		BAC0C9B72AD209EB00F57C89 /* LoginDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC0C9B62AD209EB00F57C89 /* LoginDomain.swift */; };
+		BA8D18992ADBAF4800F2B25A /* RobotoMono-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BA8D18972ADBAF4800F2B25A /* RobotoMono-VariableFont_wght.ttf */; };
+		BA8D189A2ADBAF4800F2B25A /* RobotoMono-Italic-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BA8D18982ADBAF4800F2B25A /* RobotoMono-Italic-VariableFont_wght.ttf */; };
+		BA8D189C2AE09C7B00F2B25A /* SystemEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8D189B2AE09C7B00F2B25A /* SystemEnvironment.swift */; };
+		BA8D189F2AEDA55600F2B25A /* UserSongView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8D189E2AEDA55600F2B25A /* UserSongView.swift */; };
+		BA8D18A12AEF206D00F2B25A /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8D18A02AEF206D00F2B25A /* Song.swift */; };
+		BA9C37262ADB708500F93FE9 /* ProfilePicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA9C37252ADB708500F93FE9 /* ProfilePicture.swift */; };
+		BAA0D2DF2AD2209D00F38D67 /* AuthClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA0D2DE2AD2209D00F38D67 /* AuthClient.swift */; };
 		BAD27A982A7EE45B00D74AC7 /* AudioScapeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD27A972A7EE45B00D74AC7 /* AudioScapeApp.swift */; };
 		BAD27A9A2A7EE45B00D74AC7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAD27A992A7EE45B00D74AC7 /* ContentView.swift */; };
 		BAD27A9C2A7EE45B00D74AC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAD27A9B2A7EE45B00D74AC7 /* Assets.xcassets */; };
@@ -49,7 +55,13 @@
 		BA584C8D2AABF6AA0012CC68 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		BA584C8F2AAC069B0012CC68 /* UserSong.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSong.swift; sourceTree = "<group>"; };
 		BA584C912AAE32760012CC68 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
-		BAC0C9B62AD209EB00F57C89 /* LoginDomain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDomain.swift; sourceTree = "<group>"; };
+		BA8D18972ADBAF4800F2B25A /* RobotoMono-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoMono-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		BA8D18982ADBAF4800F2B25A /* RobotoMono-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoMono-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		BA8D189B2AE09C7B00F2B25A /* SystemEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemEnvironment.swift; sourceTree = "<group>"; };
+		BA8D189E2AEDA55600F2B25A /* UserSongView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSongView.swift; sourceTree = "<group>"; };
+		BA8D18A02AEF206D00F2B25A /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		BA9C37252ADB708500F93FE9 /* ProfilePicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePicture.swift; sourceTree = "<group>"; };
+		BAA0D2DE2AD2209D00F38D67 /* AuthClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthClient.swift; sourceTree = "<group>"; };
 		BAD27A942A7EE45B00D74AC7 /* AudioScape.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AudioScape.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAD27A972A7EE45B00D74AC7 /* AudioScapeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioScapeApp.swift; sourceTree = "<group>"; };
 		BAD27A992A7EE45B00D74AC7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -85,10 +97,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA8D18922ADBAD0000F2B25A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				BA8D18982ADBAF4800F2B25A /* RobotoMono-Italic-VariableFont_wght.ttf */,
+				BA8D18972ADBAF4800F2B25A /* RobotoMono-VariableFont_wght.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		BAD27A8B2A7EE45B00D74AC7 = {
 			isa = PBXGroup;
 			children = (
+				BA8D189B2AE09C7B00F2B25A /* SystemEnvironment.swift */,
+				BA8D18922ADBAD0000F2B25A /* Fonts */,
 				BA584C912AAE32760012CC68 /* UserInfo.swift */,
+				BA9C37252ADB708500F93FE9 /* ProfilePicture.swift */,
 				BAD27AC02A801AF000D74AC7 /* AudioScape-Bridging-Header.h */,
 				BAD27AC32A801C6F00D74AC7 /* SpotifyiOS.framework */,
 				BAD27A962A7EE45B00D74AC7 /* AudioScape */,
@@ -123,7 +147,9 @@
 				BAD27A9D2A7EE45B00D74AC7 /* Preview Content */,
 				BA584C8D2AABF6AA0012CC68 /* User.swift */,
 				BA584C8F2AAC069B0012CC68 /* UserSong.swift */,
-				BAC0C9B62AD209EB00F57C89 /* LoginDomain.swift */,
+				BAA0D2DE2AD2209D00F38D67 /* AuthClient.swift */,
+				BA8D189E2AEDA55600F2B25A /* UserSongView.swift */,
+				BA8D18A02AEF206D00F2B25A /* Song.swift */,
 			);
 			path = AudioScape;
 			sourceTree = "<group>";
@@ -215,7 +241,9 @@
 			files = (
 				BAD27A9F2A7EE45B00D74AC7 /* Preview Assets.xcassets in Resources */,
 				BAD27A9C2A7EE45B00D74AC7 /* Assets.xcassets in Resources */,
+				BA8D18992ADBAF4800F2B25A /* RobotoMono-VariableFont_wght.ttf in Resources */,
 				BA584C812A995F470012CC68 /* GoogleService-Info.plist in Resources */,
+				BA8D189A2ADBAF4800F2B25A /* RobotoMono-Italic-VariableFont_wght.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,17 +254,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA8D18A12AEF206D00F2B25A /* Song.swift in Sources */,
 				BA584C7F2A9950BA0012CC68 /* SpotifyAPIManager.swift in Sources */,
+				BAA0D2DF2AD2209D00F38D67 /* AuthClient.swift in Sources */,
+				BA8D189F2AEDA55600F2B25A /* UserSongView.swift in Sources */,
 				BA584C8A2AABCD830012CC68 /* FirestoreManager.swift in Sources */,
 				BAD27ABD2A80195B00D74AC7 /* LoginView.swift in Sources */,
-				BAC0C9B72AD209EB00F57C89 /* LoginDomain.swift in Sources */,
 				BAD27ABF2A8019B800D74AC7 /* AuthManager.swift in Sources */,
 				BAD27A9A2A7EE45B00D74AC7 /* ContentView.swift in Sources */,
 				BA584C832AA96B690012CC68 /* LocationManager.swift in Sources */,
+				BA9C37262ADB708500F93FE9 /* ProfilePicture.swift in Sources */,
 				BA584C7D2A98786B0012CC68 /* HomeView.swift in Sources */,
 				BAD27A982A7EE45B00D74AC7 /* AudioScapeApp.swift in Sources */,
 				BA584C922AAE32760012CC68 /* UserInfo.swift in Sources */,
 				BA584C8C2AABF3C80012CC68 /* HomeModel.swift in Sources */,
+				BA8D189C2AE09C7B00F2B25A /* SystemEnvironment.swift in Sources */,
 				BA584C7B2A98777D0012CC68 /* KeychainManager.swift in Sources */,
 				BA584C8E2AABF6AA0012CC68 /* User.swift in Sources */,
 				BA584C902AAC069B0012CC68 /* UserSong.swift in Sources */,
@@ -377,7 +409,6 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AudioScape/Info.plist;
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "GIVE ME YOUR LOCATION HEHEHEHEH";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "GIVE ME YOUR LOCATION HEHEHEHEH";
 				INFOPLIST_KEY_NSLocationUsageDescription = "GIVE ME YOUR LOCATION HEHEHEHEH";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "GIVE ME YOUR LOCATION HEHEHEHEH";
@@ -419,7 +450,6 @@
 				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AudioScape/Info.plist;
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "GIVE ME YOUR LOCATION HEHEHEHEH";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "GIVE ME YOUR LOCATION HEHEHEHEH";
 				INFOPLIST_KEY_NSLocationUsageDescription = "GIVE ME YOUR LOCATION HEHEHEHEH";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "GIVE ME YOUR LOCATION HEHEHEHEH";

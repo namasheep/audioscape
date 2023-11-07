@@ -20,10 +20,6 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
         super.init()
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        //locationManager.requestWhenInUseAuthorization()
-        //locationManager.startUpdatingLocation()
-        
-        // Initialize lastUpdatedLocation as nil
         lastUpdatedLocation = nil
     }
 
@@ -116,15 +112,12 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     }
 
     // MARK: - Additional Convenience Methods
-
     func stopUpdatingLocation() {
         locationManager.stopUpdatingLocation()
     }
-
     func requestLocationOnce() {
         locationManager.requestLocation()
     }
-
     func checkLocationServicesEnabled() -> Bool {
         return CLLocationManager.locationServicesEnabled()
     }
@@ -134,7 +127,9 @@ class LocationManager: NSObject, ObservableObject, CLLocationManagerDelegate {
     }
     func getLocationHash() -> String?{
         do{
-            let latitude = lastKnownLocation!.coordinate.latitude
+            guard let latitude = lastKnownLocation?.coordinate.latitude else{
+                return nil
+            }
             let longitude = lastKnownLocation!.coordinate.longitude
             let geo = try Geohash.encode(latitude: latitude, longitude: longitude, precision: .custom(value: 9))
             print(geo)

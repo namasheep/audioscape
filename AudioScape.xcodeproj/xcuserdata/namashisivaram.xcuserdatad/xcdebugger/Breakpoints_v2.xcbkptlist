@@ -7,95 +7,47 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "9058927A-CE9B-469E-AED4-4F3269FEF759"
-            shouldBeEnabled = "No"
+            uuid = "59B398B7-6FBD-44A5-9602-8AACA5171EC3"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "AudioScape/SpotifyAuthViewModel.swift"
+            filePath = "AudioScape/ContentView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "authenticateWithSpotifyAuthFlow()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "39C952BE-7FE2-4CD6-BFEB-0FC61257B63A"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AudioScape/SpotifyAuthViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "authenticateWithSpotifyAuthFlow()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "68834F1A-6E96-4729-9708-95DDA37BDC0A"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AudioScape/SpotifyAuthViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "authenticateWithSpotifyAuthFlow()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "88230B3F-E9E9-41D2-96E9-046466304AE0"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AudioScape/LoginView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
+            startingLineNumber = "153"
+            endingLineNumber = "153"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>
                <Location
-                  uuid = "88230B3F-E9E9-41D2-96E9-046466304AE0 - d570907c57dadfe5"
+                  uuid = "59B398B7-6FBD-44A5-9602-8AACA5171EC3 - 49164353dd419e0a"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;)&gt; in AudioScape.LoginView.body.getter : some"
+                  symbolName = "closure #1 () -&gt; SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;SwiftUI.ProgressView&lt;SwiftUI.Text, SwiftUI.EmptyView&gt;, SwiftUI.Button&lt;SwiftUI.Text&gt;&gt;, AudioScape.HomeView&gt; in closure #2 (ComposableArchitecture.ViewStore&lt;AudioScape.ContentDomain.State, AudioScape.ContentDomain.Action&gt;) -&gt; &lt;&lt;opaque return type of SwiftUI.View.onOpenURL(perform: (Foundation.URL) -&gt; ()) -&gt; some&gt;&gt;.0 in AudioScape.ContentView.body.getter : some"
                   moduleName = "AudioScape"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/namashisivaram/Documents/Projects/AudioScape/AudioScape/LoginView.swift"
+                  urlString = "file:///Users/namashisivaram/Documents/Projects/AudioScape/AudioScape/ContentView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "16"
-                  endingLineNumber = "16"
-                  offsetFromSymbolStart = "1212">
+                  startingLineNumber = "153"
+                  endingLineNumber = "153"
+                  offsetFromSymbolStart = "1844">
                </Location>
                <Location
-                  uuid = "88230B3F-E9E9-41D2-96E9-046466304AE0 - 84fdf73526559870"
+                  uuid = "59B398B7-6FBD-44A5-9602-8AACA5171EC3 - 49164353dd41981a"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.frame(width: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, height: Swift.Optional&lt;CoreGraphics.CGFloat&gt;, alignment: SwiftUI.Alignment) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;)&gt; in AudioScape.LoginView.body.getter : some"
+                  symbolName = "closure #1 () -&gt; SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;SwiftUI.ProgressView&lt;SwiftUI.Text, SwiftUI.EmptyView&gt;, SwiftUI.Button&lt;SwiftUI.Text&gt;&gt;, AudioScape.HomeView&gt; in closure #2 (ComposableArchitecture.ViewStore&lt;AudioScape.ContentDomain.State, AudioScape.ContentDomain.Action&gt;) -&gt; &lt;&lt;opaque return type of SwiftUI.View.onOpenURL(perform: (Foundation.URL) -&gt; ()) -&gt; some&gt;&gt;.0 in AudioScape.ContentView.body.getter : some"
                   moduleName = "AudioScape"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/namashisivaram/Documents/Projects/AudioScape/AudioScape/LoginView.swift"
+                  urlString = "file:///Users/namashisivaram/Documents/Projects/AudioScape/AudioScape/ContentView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
-                  offsetFromSymbolStart = "60">
+                  startingLineNumber = "169"
+                  endingLineNumber = "169"
+                  offsetFromSymbolStart = "1844">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -103,143 +55,47 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B90A9F92-238A-4D96-A998-0FF0188451C3"
-            shouldBeEnabled = "No"
+            uuid = "AC743A56-D854-4164-842D-182616A59C4F"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "AudioScape/LocationManager.swift"
+            filePath = "AudioScape/HomeView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "sendLocationIfUpdated()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "A084DD65-841C-4F9A-A7D4-85F70E688737"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AudioScape/ContentView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
+            startingLineNumber = "159"
+            endingLineNumber = "159"
             landmarkName = "body"
             landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "950B0241-89F1-49D8-8F84-B6DA53AB2C52"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AudioScape/ContentView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "body"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "88D35E6F-CB69-4034-A59D-10CDB44EB789"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AudioScape/AuthManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "221"
-            endingLineNumber = "221"
-            landmarkName = "handleSpotifyCallback(_:)"
-            landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "88D35E6F-CB69-4034-A59D-10CDB44EB789 - 3cc2ab1ceac5b651"
+                  uuid = "AC743A56-D854-4164-842D-182616A59C4F - 10710511f2b45de4"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (Swift.Optional&lt;FirebaseFunctions.HTTPSCallableResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in AudioScape.AuthManager.handleSpotifyCallback(Foundation.URL) -&gt; ()"
+                  symbolName = "AudioScape.HomeView.init(store: ComposableArchitecture.Store&lt;AudioScape.HomeDomain.State, AudioScape.HomeDomain.Action&gt;) -&gt; AudioScape.HomeView"
                   moduleName = "AudioScape"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/namashisivaram/Documents/Projects/AudioScape/AudioScape/AuthManager.swift"
+                  urlString = "file:///Users/namashisivaram/Documents/Projects/AudioScape/AudioScape/HomeView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "217"
-                  endingLineNumber = "217"
-                  offsetFromSymbolStart = "508">
+                  startingLineNumber = "160"
+                  endingLineNumber = "160"
+                  offsetFromSymbolStart = "40">
                </Location>
                <Location
-                  uuid = "88D35E6F-CB69-4034-A59D-10CDB44EB789 - 3cc2ab1ceac5b651"
+                  uuid = "AC743A56-D854-4164-842D-182616A59C4F - 10710511f2b45de4"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (Swift.Optional&lt;FirebaseFunctions.HTTPSCallableResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in AudioScape.AuthManager.handleSpotifyCallback(Foundation.URL) -&gt; ()"
+                  symbolName = "AudioScape.HomeView.init(store: ComposableArchitecture.Store&lt;AudioScape.HomeDomain.State, AudioScape.HomeDomain.Action&gt;) -&gt; AudioScape.HomeView"
                   moduleName = "AudioScape"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/namashisivaram/Documents/Projects/AudioScape/AudioScape/AuthManager.swift"
+                  urlString = "file:///Users/namashisivaram/Documents/Projects/AudioScape/AudioScape/HomeView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "217"
-                  endingLineNumber = "217"
-                  offsetFromSymbolStart = "468">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "1C8126E8-4C9E-43EC-B6DD-5FA684636C30"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AudioScape/AuthManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "212"
-            endingLineNumber = "212"
-            landmarkName = "handleSpotifyCallback(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "1C8126E8-4C9E-43EC-B6DD-5FA684636C30 - 4397c2a74b27f1b0"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;FirebaseFunctions.HTTPSCallableResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in AudioScape.AuthManager.handleSpotifyCallback(Foundation.URL) -&gt; ()"
-                  moduleName = "AudioScape"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/namashisivaram/Documents/Projects/AudioScape/AudioScape/AuthManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "207"
-                  endingLineNumber = "207"
-                  offsetFromSymbolStart = "1852">
-               </Location>
-               <Location
-                  uuid = "1C8126E8-4C9E-43EC-B6DD-5FA684636C30 - 3cc2ab1ceac5b7a8"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRAuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (Swift.Optional&lt;FirebaseFunctions.HTTPSCallableResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in AudioScape.AuthManager.handleSpotifyCallback(Foundation.URL) -&gt; ()"
-                  moduleName = "AudioScape"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/namashisivaram/Documents/Projects/AudioScape/AudioScape/AuthManager.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "208"
-                  endingLineNumber = "208"
-                  offsetFromSymbolStart = "168">
+                  startingLineNumber = "160"
+                  endingLineNumber = "160"
+                  offsetFromSymbolStart = "48">
                </Location>
             </Locations>
          </BreakpointContent>

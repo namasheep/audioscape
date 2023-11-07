@@ -22,7 +22,9 @@ class AuthManager: ObservableObject {
             // Load user information when the AuthManager is initialized
             loadUser()
         }
+    
     func loadUser() {
+        /*
             if let currentUser = Auth.auth().currentUser {
                 print("HERE LOAD USER")
                 Functions.functions().httpsCallable("getUserInfo").call(["uid": currentUser.uid]) { result, error in
@@ -45,13 +47,11 @@ class AuthManager: ObservableObject {
             } else {
                 self.userInfo = nil // Set userInfo to nil if there is no authenticated user
             }
+         */
         }
 
     func authenticateWithSpotifyAuthFlow() {
         self.isLoadingSignIn = true
-        // Your code to initiate the Spotify authentication process
-        // This might involve opening Safari or a WebView to redirect the user to the Spotify login page
-        // Remember to use the custom URI scheme and redirect URI you set up in the Spotify Developer Dashboard
         let scope = "user-read-email playlist-read-private" // Add any required scopes here
 
                 // Construct the Spotify authentication URL
