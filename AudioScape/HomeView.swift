@@ -14,7 +14,7 @@ struct HomeDomain : Reducer{
         var userInfo : UserInfo?
         var userList : [User]?
         var userSongList : [UserSong]?
-        
+        var hub = HubDomain.State(userInfo: nil)
     }
     enum Action : Equatable {
         case loadUser
@@ -26,12 +26,15 @@ struct HomeDomain : Reducer{
         case getUsersWithLocationSuccess([User])
         case logOut
         case logOutSuccess
+        case hubAction(HubDomain.Action)
     }
     struct HomeEnvironment {
       var fetchNumber: @Sendable () async throws -> Int
     }
     var body: some ReducerOf<Self> {
-        
+        Scope(state: \.hub, action: /Action.hubAction) {
+            HubDomain()
+            }
         
         Reduce { state, action in
             switch action{
@@ -57,7 +60,7 @@ struct HomeDomain : Reducer{
                                     img = ProfilePicture(height: imgData["height"] as! Int ,width: imgData["height"] as! Int, url: imgData["url"] as! String)
                                 }
                                 let disp = data["display_name"] as! String
-                                var songs : [String]?
+                                var songs : [String]? = data["songs"] as! [String]?
                                 userInfo = UserInfo(userID: uid, songs: songs, href: href, dispName: disp, img: img)
                             }
                             await send(.loadUserSuccess(userInfo))
@@ -74,6 +77,7 @@ struct HomeDomain : Reducer{
                 state.loadingUser = false
                 
                 state.userInfo = userInfo
+                state.hub.userInfo = userInfo
                 return .none
                 
             case .loadUserError:
@@ -137,8 +141,10 @@ struct HomeDomain : Reducer{
                 state.userList = userList
                 for user in userList {
                     // Your code for each user goes here
-                    let randomValue = Int(arc4random_uniform(3))
-                    userSongs.append(UserSong(uid: user.userID, songid: user.songs[randomValue]))
+                    if(user.songs.count>0){
+                        let randomValue = Int(arc4random_uniform(UInt32(user.songs.count)))
+                        userSongs.append(UserSong(uid: user.userID, songid: user.songs[randomValue]))
+                    }
                 }
                 state.userSongList = userSongs
                 return .none
@@ -146,6 +152,14 @@ struct HomeDomain : Reducer{
                 return .none
                 
             case .logOutSuccess:
+                return .none
+            case .hubAction(let action):
+                if(action == HubDomain.Action.loadUser){
+                    print("GABASKI")
+                    return .run{send in
+                        await send(.loadUser)
+                    }
+                }
                 return .none
             }
         }
@@ -157,6 +171,7 @@ struct HomeView: View {
     let store: StoreOf<HomeDomain>
     init(store: StoreOf<HomeDomain>) {
         self.store = store
+        
         
     }
     var body: some View {
@@ -192,15 +207,18 @@ struct HomeView: View {
                         Text("HOME")
                     }
                     Section{
-                        if(viewStore.loadingUser ==  true){
-                            ProgressView("Loading your profile...")
-                        }
-                        else{
-                            HubView(store: Store(initialState: HubDomain.State(userInfo: viewStore.userInfo!)){
+                        
+                        HubView(
+                            store: self.store.scope(
+                                state: \.hub,
+                                action: HomeDomain.Action.hubAction
+                            )
+                        )
+                           /* HubView(store: Store(initialState: HubDomain.State(userInfo: viewStore.userInfo)){
                                 HubDomain()
                                 }
-                            )
-                        }
+                            )*/
+                        
                     }.tabItem(){
                         Text("PROFILE")
                     }
@@ -209,6 +227,18 @@ struct HomeView: View {
             }
             .padding(.leading, 10)
             .padding(.trailing, 10)
+            .onReceive(NotificationCenter.default.publisher(for: .AuthSuccess))  { _ in
+                        // This code will execute every time the app becomes active
+                        // You can put your logic here
+                viewStore.send(.loadUser)
+                viewStore.send(.startLocationUpdate)
+            }
+            .onReceive(NotificationCenter.default.publisher(for: UIApplication.didBecomeActiveNotification)) { _ in
+                        // This code will execute every time the app becomes active
+                        // You can put your logic here
+                viewStore.send(.loadUser)
+                viewStore.send(.startLocationUpdate)
+            }
             .onAppear{
                 viewStore.send(.loadUser)
                 viewStore.send(.startLocationUpdate)
@@ -219,44 +249,73 @@ struct HomeView: View {
 }
 struct HubDomain : Reducer {
     struct State : Equatable{
-        var userInfo : UserInfo
+        var userInfo : UserInfo?
     }
     enum Action : Equatable{
-        
+        case loadUser
     }
     func reduce(into state: inout State, action: Action) -> Effect<Action> {
-        
+        switch action{
+        case .loadUser:
+            return .none
+        }
     }
 }
 
 struct HubView: View {
     let store : StoreOf<HubDomain>
+    init(store: StoreOf<HubDomain>) {
+        self.store = store
+        //self.store.send(.loadUser)
+    }
     var body: some View {
         WithViewStore(self.store, observe: { $0 }) { viewStore in
             ZStack {
-                                
-                VStack {
-                    HStack{
-                        Text("AudioScape")
-                            .fontWeight(.heavy)
-                            .foregroundColor(.green)
-                            
-                        Spacer()
-                    }
-                    HStack{
-                        VStack{
-                            AsyncImage(url: URL(string: (viewStore.userInfo.profilePics!.url)))
-                            // Adjust the size as needed
-                                .clipShape(Circle()) // Optionally make the image circular
-                            Text("\(viewStore.userInfo.dispName)")
+                if(viewStore.userInfo ==  nil){
+                    ProgressView("Loading your profile...")
+                        .onAppear(){
+                            viewStore.send(.loadUser)
                         }
+                }
+                else{
+                    VStack {
+                        HStack{
+                            Text("AudioScape")
+                                .fontWeight(.heavy)
+                                .foregroundColor(.green)
+                            
+                            Spacer()
+                        }
+                        HStack{
+                            VStack{
+                                if (viewStore.userInfo?.profilePics==nil){
+                                    Circle()
+                                }
+                                else{
+                                    AsyncImage(url: URL(string: (viewStore.userInfo?.profilePics!.url)!))
+                                        .clipShape(Circle())
+                                }
+                                // Adjust the size as needed
+                                // Optionally make the image circular
+                                Text("\(viewStore.userInfo!.dispName)")
+                                ForEach(viewStore.userInfo!.songs!, id: \.self) { userSong in
+                                    UserSongView(
+                                        store: Store(
+                                            initialState: UserSongDomain.State(userSong: UserSong(uid: viewStore.userInfo!.userID, songid: userSong))
+                                        ) {
+                                            UserSongDomain()
+                                        }
+                                    )
+                                }
+                            }
+                            Spacer()
+                        }
+                        
                         Spacer()
                     }
-                    
-                    Spacer()
-                }
                 
             }
+        }
             
         }
     }

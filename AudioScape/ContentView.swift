@@ -3,6 +3,9 @@ import FirebaseAuth
 import CoreLocation // Import Core Location
 import FirebaseFunctions
 import ComposableArchitecture
+extension Notification.Name {
+    static let AuthSuccess = Notification.Name("AuthSuccess")
+}
 struct ContentDomain : Reducer{
     var spotifyClientID = "efd582f277e04d36a7886c96b1390a08";
     private let redirectURLScheme = "audioscape://callback";
@@ -70,6 +73,7 @@ struct ContentDomain : Reducer{
             case .signInSuccess:
                 state.loggedIn = true
                 state.loadingLogin = false
+                NotificationCenter.default.post(name: .AuthSuccess, object: nil)
                 return .none
            case .homeAction(let action):
                 if(action == HomeDomain.Action.logOut){
@@ -194,3 +198,4 @@ struct ContentView_Previews: PreviewProvider {
         )
     }
 }
+

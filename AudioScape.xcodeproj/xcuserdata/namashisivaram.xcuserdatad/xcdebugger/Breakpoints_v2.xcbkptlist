@@ -8,14 +8,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "59B398B7-6FBD-44A5-9602-8AACA5171EC3"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AudioScape/ContentView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "153"
-            endingLineNumber = "153"
+            startingLineNumber = "157"
+            endingLineNumber = "157"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>
@@ -49,6 +49,21 @@
                   endingLineNumber = "169"
                   offsetFromSymbolStart = "1844">
                </Location>
+               <Location
+                  uuid = "59B398B7-6FBD-44A5-9602-8AACA5171EC3 - 49164353dd41998e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;SwiftUI.ProgressView&lt;SwiftUI.Text, SwiftUI.EmptyView&gt;, SwiftUI.Button&lt;SwiftUI.Text&gt;&gt;, AudioScape.HomeView&gt; in closure #2 (ComposableArchitecture.ViewStore&lt;AudioScape.ContentDomain.State, AudioScape.ContentDomain.Action&gt;) -&gt; &lt;&lt;opaque return type of SwiftUI.View.onOpenURL(perform: (Foundation.URL) -&gt; ()) -&gt; some&gt;&gt;.0 in AudioScape.ContentView.body.getter : some"
+                  moduleName = "AudioScape"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/namashisivaram/Documents/Projects/AudioScape/AudioScape/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "157"
+                  endingLineNumber = "157"
+                  offsetFromSymbolStart = "1844">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -56,16 +71,16 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "AC743A56-D854-4164-842D-182616A59C4F"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AudioScape/HomeView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "159"
-            endingLineNumber = "159"
-            landmarkName = "body"
-            landmarkType = "24">
+            startingLineNumber = "173"
+            endingLineNumber = "173"
+            landmarkName = "init(store:)"
+            landmarkType = "7">
             <Locations>
                <Location
                   uuid = "AC743A56-D854-4164-842D-182616A59C4F - 10710511f2b45de4"
@@ -97,7 +112,101 @@
                   endingLineNumber = "160"
                   offsetFromSymbolStart = "48">
                </Location>
+               <Location
+                  uuid = "AC743A56-D854-4164-842D-182616A59C4F - 10710511f2b45c8b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AudioScape.HomeView.init(store: ComposableArchitecture.Store&lt;AudioScape.HomeDomain.State, AudioScape.HomeDomain.Action&gt;) -&gt; AudioScape.HomeView"
+                  moduleName = "AudioScape"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/namashisivaram/Documents/Projects/AudioScape/AudioScape/HomeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "171"
+                  endingLineNumber = "171"
+                  offsetFromSymbolStart = "40">
+               </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A7ED3FC9-0274-4EDC-B3F1-318E8924A176"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AudioScape/HomeView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "277"
+            endingLineNumber = "277"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "A7ED3FC9-0274-4EDC-B3F1-318E8924A176 - e0ee654a6dcfc134"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Spacer)&gt;&gt;, SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI._ConditionalContent&lt;SwiftUI.Circle, &lt;&lt;opaque return type of SwiftUI.View.clipShape&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.Shape&gt;(_: &#x3c4;_1_0, style: SwiftUI.FillStyle) -&gt; some&gt;&gt;.0&gt;, SwiftUI.Text)&gt;&gt;, SwiftUI.Spacer)&gt;&gt;, SwiftUI.Spacer)&gt; in closure #1 () -&gt; SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Spacer)&gt;&gt;, SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI._ConditionalContent&lt;SwiftUI.Circle, &lt;&lt;opaque return type of SwiftUI.View.clipShape&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.Shape&gt;(_: &#x3c4;_1_0, style: SwiftUI.FillStyle) -&gt; some&gt;&gt;.0&gt;, SwiftUI.Text)&gt;&gt;, SwiftUI.Spacer)&gt;&gt;, SwiftUI.Spacer)&gt;&gt;&gt; in closure #2 (ComposableArchitecture.ViewStore&lt;AudioScape.HubDomain.State, AudioScape.HubDomain.Action&gt;) -&gt; SwiftUI.ZStack&lt;SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Spacer)&gt;&gt;, SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI._ConditionalContent&lt;SwiftUI.Circle, &lt;&lt;opaque return type of SwiftUI.View.clipShape&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.Shape&gt;(_: &#x3c4;_1_0, style: SwiftUI.FillStyle) -&gt; some&gt;&gt;.0&gt;, SwiftUI.Text)&gt;&gt;, SwiftUI.Spacer)&gt;&gt;, SwiftUI.Spacer)&gt;&gt;&gt;&gt; in AudioScape.HubView.body.getter : some"
+                  moduleName = "AudioScape"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/namashisivaram/Documents/Projects/AudioScape/AudioScape/HomeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "275"
+                  endingLineNumber = "275"
+                  offsetFromSymbolStart = "180">
+               </Location>
+               <Location
+                  uuid = "A7ED3FC9-0274-4EDC-B3F1-318E8924A176 - 9c1715debd926600"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Spacer)&gt; in closure #2 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Spacer)&gt;&gt;, SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI._ConditionalContent&lt;SwiftUI.Circle, &lt;&lt;opaque return type of SwiftUI.View.clipShape&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.Shape&gt;(_: &#x3c4;_1_0, style: SwiftUI.FillStyle) -&gt; some&gt;&gt;.0&gt;, SwiftUI.Text)&gt;&gt;, SwiftUI.Spacer)&gt;&gt;, SwiftUI.Spacer)&gt; in closure #1 () -&gt; SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Spacer)&gt;&gt;, SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI._ConditionalContent&lt;SwiftUI.Circle, &lt;&lt;opaque return type of SwiftUI.View.clipShape&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.Shape&gt;(_: &#x3c4;_1_0, style: SwiftUI.FillStyle) -&gt; some&gt;&gt;.0&gt;, SwiftUI.Text)&gt;&gt;, SwiftUI.Spacer)&gt;&gt;, SwiftUI.Spacer)&gt;&gt;&gt; in closure #2 (ComposableArchitecture.ViewStore&lt;AudioScape.HubDomain.State, AudioScape.HubDomain.Action&gt;) -&gt; SwiftUI.ZStack&lt;SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Spacer)&gt;&gt;, SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI._ConditionalContent&lt;SwiftUI.Circle, &lt;&lt;opaque return type of SwiftUI.View.clipShape&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.Shape&gt;(_: &#x3c4;_1_0, style: SwiftUI.FillStyle) -&gt; some&gt;&gt;.0&gt;, SwiftUI.Text)&gt;&gt;, SwiftUI.Spacer)&gt;&gt;, SwiftUI.Spacer)&gt;&gt;&gt;&gt; in AudioScape.HubView.body.getter : some"
+                  moduleName = "AudioScape"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/namashisivaram/Documents/Projects/AudioScape/AudioScape/HomeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "276"
+                  endingLineNumber = "276"
+                  offsetFromSymbolStart = "96">
+               </Location>
+               <Location
+                  uuid = "A7ED3FC9-0274-4EDC-B3F1-318E8924A176 - 12cd1fa2db503b0d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 () -&gt; SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Spacer)&gt;&gt;, SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI._ConditionalContent&lt;SwiftUI.Circle, &lt;&lt;opaque return type of SwiftUI.View.clipShape&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.Shape&gt;(_: &#x3c4;_1_0, style: SwiftUI.FillStyle) -&gt; some&gt;&gt;.0&gt;, SwiftUI.Text)&gt;&gt;, SwiftUI.Spacer)&gt;&gt;, SwiftUI.Spacer)&gt;&gt;&gt; in closure #2 (ComposableArchitecture.ViewStore&lt;AudioScape.HubDomain.State, AudioScape.HubDomain.Action&gt;) -&gt; SwiftUI.ZStack&lt;SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0, SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.Text, SwiftUI.Spacer)&gt;&gt;, SwiftUI.HStack&lt;SwiftUI.TupleView&lt;(SwiftUI.VStack&lt;SwiftUI.TupleView&lt;(SwiftUI._ConditionalContent&lt;SwiftUI.Circle, &lt;&lt;opaque return type of SwiftUI.View.clipShape&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.Shape&gt;(_: &#x3c4;_1_0, style: SwiftUI.FillStyle) -&gt; some&gt;&gt;.0&gt;, SwiftUI.Text)&gt;&gt;, SwiftUI.Spacer)&gt;&gt;, SwiftUI.Spacer)&gt;&gt;&gt;&gt; in AudioScape.HubView.body.getter : some"
+                  moduleName = "AudioScape"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/namashisivaram/Documents/Projects/AudioScape/AudioScape/HomeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "275"
+                  endingLineNumber = "275"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2158A402-B654-48D1-A163-7990BA9EF09E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AudioScape/HomeView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "260"
+            endingLineNumber = "260"
+            landmarkName = "reduce(into:action:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
